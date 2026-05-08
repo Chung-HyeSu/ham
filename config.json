@@ -1,0 +1,10 @@
+{
+  "pet_height": 150,
+  "idle_after": 0.8,
+  "max_fps": 60.0,
+  "dance_after": 60.0,
+  "dance_fps": 14.0,
+  "last_x": 1788,
+  "last_y": 865,
+  "active_fps": 24.0
+}
