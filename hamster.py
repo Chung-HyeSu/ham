@@ -21,7 +21,7 @@ SAMPLE_STEP = 2
 DEFAULTS = {
     'pet_height':  150,
     'idle_after':  0.8,   # 마지막 키 입력 후 N초 동안 활성 유지
-    'max_fps':     60.0,  # 미친 듯이 타이핑 시 최대 fps
+    'max_fps':     24.0,  # 미친 듯이 타이핑 시 최대 fps
     'dance_after': 60.0,  # N초 유휴 시 자동 댄스
     'dance_fps':   14.0,
     'last_x':      None,
@@ -339,7 +339,7 @@ class HamsterPet:
             # 타이핑 중: kps 에 따라 12~max_fps 선형 보간
             # 1kps → 12fps, 10kps → max_fps
             kps = len(_key_times)
-            fps = max(12.0, min(kps * 6.0, self.cfg['max_fps']))
+            fps = max(8.0, min(kps * 3.0, self.cfg['max_fps']))
         elif idle_sec >= self.cfg['dance_after']:
             fps = self.cfg['dance_fps']
         else:
